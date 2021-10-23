@@ -1,5 +1,4 @@
 import os
-import operator
 import sys
 
 if len(sys.argv) == 1:
