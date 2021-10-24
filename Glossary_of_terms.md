@@ -5,9 +5,11 @@
 -------
 기계학습(Machine Learning)의 한 방법이며 training data를 labeling이 되어있는 data를 사용하여 학습을 시키는 방법이다. 이미지 분류 모델에 주로 사용된다.
 
+
 비지도학습(unsupervised learning)
 ---------
 기계학습(Machine Learning)의 한 방법이며 training data에 labeling이 되어있지않은것이 특징이다. 데이터가 어떻게 구성되었는지를 알아내는 문제에 주로 사용된다. 
+
 
 디지털트윈(digital twin)
 ------
@@ -17,6 +19,7 @@
 메타버스(metaverse)
 -------
 메타버스는 가상의 세계를 의미하며 3차원의 실제 생활과 연결된 가상 세계를 의미한다.구체적으로, 정치와 경제, 사회, 문화의 전반적 측면에 현실과 비현실이 공존하는 생활형, 게임형 가상 세계라는 의미로 폭넓게 사용되며 코로나 바이러스 상황으로 인해 직접 대면하는 사회생활이 제한됨에 따라 다양한 기업들이 메타버스에 진출하여 홍보, 마케팅을 하였다.
+
 
 빅데이터(big data)
 -------
@@ -37,17 +40,21 @@
 -------
 딥 러닝은 높은 수준의 추상화(abstractions, 다량의 데이터나 복잡한 자료들 속에서 핵심적인 내용 또는 기능을 요약하는 작업)를 시도하는 기계 학습 알고리즘의 한 부분으로 정의되며, 큰 틀에서 사람의 사고방식을 컴퓨터에게 가르치는 기계학습의 한 분야라고 이야기할 수 있다.
 
+
 강화학습(reinforcement learning)
 -------
 강화 학습(Reinforcement learning)은 기계 학습의 한 영역이다. 행동심리학에서 영감을 받았으며, 어떤 환경 안에서 정의된 에이전트가 현재의 상태를 인식하여, 선택 가능한 행동들 중 보상을 최대화하는 행동 혹은 행동 순서를 선택하는 방법이다.
+
 
 CNN(convolutional neural network:합성곱 신경망)
 -------
 합성곱 신경망(Convolutional neural network, CNN)은 시각적 영상을 분석하는 데 사용되는 여러겹의 신경망을 의미한다. 딥 러닝에서 심층 신경망으로 분류되며, 시각적 영상 분석에 주로 적용된다. 영상 및 동영상 인식, 추천 시스템, 영상 분류, 의료 영상 분석 및 자연어 처리 등에 응용된다.
 
+
 컴퓨터공학 사고(computational thinking)
 -------
 컴퓨터 공학 사고은 컴퓨터가 효과적으로 수행할 수 있도록 문제를 정의하고 그에 대한 해결 과정을 기술하는 것이 포함된 사고 과정을 의미한다.
+
 
 파이썬(python)
 -------
@@ -62,6 +69,7 @@ CNN(convolutional neural network:합성곱 신경망)
 AI(Artificial intelligence: 인공지능)
 -------
 인공지능은 인간의 학습능력, 추론능력, 지각능력을에 인공적으로 구현하려는 컴퓨터과학의 세부 분야이다.
+
 
 자연어처리(natural language processing)
 -------
@@ -87,10 +95,10 @@ RNN(Recurrent neural network or Recursive neural network: 순환신경망, 재�
 -------
 1. 순환신경망(Recurrent neural network)
 * 인공 신경망의 한 종류, 유닛간의 연결이 순환적 구조를 갖는 특징을 가진다. 이 구조는 시변적 특성(시간에 연속적인 특성)을 모델링 할 수 있어서 연속적(시퀀스)형태의 입력을 처리할 수 있다.
-* ![image](https://user-images.githubusercontent.com/40755420/138584728-4ef283a3-f061-4483-9d2c-818579da7872.png)
 2. 재귀신경망(Recursive neural network)
-* 심층 신경망(Deep neural network)의 한 종류로 ㄴㅇㄹㄴㄴㄹㅁㄹㅇㄴㅁㅇㄹㄴㅁㅇㄹㄹㄴㅇㄹㄴㅇㄹㄴㅇㄹㄴㅇㄹㄴㅇㄹㄴㅇㄹㄴㅇㄹㄴㅇㄹㄴㅇㄹ
-* ![image](https://user-images.githubusercontent.com/40755420/138584814-3d9ce6f3-5368-4373-a71f-4bcfc31f72e6.png)
+* 심층 신경망(Deep neural network)의 한 종류로 순환신경망(Recurrent neural network)와 마찬가지로 연속적(시퀀스)형태의 데이터 처리에 강점을 가진다. 입력값으로 주어지는 몇개의 단어를 묶어서 분석하며 NN의 경우에는 모든 지역정보를 생략 없이 반영하지만 RNN(Recursive neural network)는 일부 정보는 스킵하여 처리한다.
+* ![image](https://user-images.githubusercontent.com/40755420/138592051-1408a228-714f-4dd0-99e0-afb412a37026.png)
+
  
 
 군집분석(Cluster analysis, 클러스터 분석)
@@ -98,11 +106,9 @@ RNN(Recurrent neural network or Recursive neural network: 순환신경망, 재�
 클러스터 분석이란 주어진 데이터들의 특성을 고려해 데이터 집단(Cluster)를 정의하고 데이터 집단의 특성을 찾는 것으로 데이터 마이닝의 한 방법이다. 여기서 클러스터는 비슷한 특성을 가진 데이터의 집단이다.
 
 
-
 Automation(자동화)
 -------
 자동화(Automation) 또는 자동제어(Automatic control)은 제어 시스템과 다른 정보 기술을 활용하여 산업 기계와 공정을 제어하여 사람이 관여할 필요를 줄이는 것이다.
-
 
 
 인공신경망(Artificial neural network,ANN)
@@ -121,11 +127,9 @@ Deepfake
 딥페이크(Deepfake)는 인공지능을 기반으로 한 인간 이미지 합성 기술이다. GAN(Generative Adversarial Network)을 사용하여, 기존의 사진이나 영상에 원하는 이미지를 겹쳐서 만들어낸다.
 
 
-
 데이터 labeling
 -------
 머신러닝에서 데이터 라벨링(레이블링, labeling)은 raw 데이터를 구별할 수 있는 라벨을 만들어 주는 작업을 의미한다. ex) (이미지:라벨) = (고양이사진: 고양이)
-
 
 
 회귀분석(regression analysis)
@@ -143,7 +147,6 @@ Deepfake
 PyTorch는 python 오픈소스 머신러닝 라이브러리 중 하나이며 facebook이 운영한다. Torch라는 머신러닝 라이브러리를 기반으로 하며 자연어 처리와 같은 작업을 할 때 주로 사용된다. 비슷한 기능을 하는 Tensorflow 보다 직관적이고 난이도가 쉽다.
 
 
-
 불변 객체(immutable object)
 ----
 Immutable object는 생성 그 상태를 바꿀 수 없는 객체를 말하며 python에서는 튜플, int,float 등의 객체이다.
@@ -156,20 +159,17 @@ Immutable object는 생성 그 상태를 바꿀 수 없는 객체를 말하며 p
 * ex) P = Person() 으로 객체를 생성했을때 P가 인스턴스 이다.
 
 
-
 객체지향 프로그래밍(Object-Oriented Programming: OOP)
 ----
 객체지향 프로그래밍은 컴퓨터 프로그래밍의 패러다임 중 하나이다. 객체 지향 프로그래밍에서 모든것은 객체로 취급되며 각각의 객체는 메세지를 서로 주고받고 데이터를 처리할 수 있다.
 
 
 함수 호출방식 (function call type)
-----
- 
+--------
 *  call-by-value(값에 의한 호출)
    * 함수가 호출 될때, 메모리 공간안에서 함수를 위한 별도의 임시 공간이 생성된다. 그 후 전달되는 매개변수의 값을 복사하여 함수의 인자로 전달하고 작업을 한다. 따라서 함수 안에서 인자의 값이 변경되어도, 외부의 변수의 값은 변경되지 않는다. 
 + call-by-reference(참조에 의한 호출)
    - 함수가 호출 될때, 메모리 공간안에 함수를 위한 별도의 임시 공간이 생성된다. 그 후 인자로 매개변수의 참조를 전달하고 작업을 한다. 매개변수의 참조에 접근하여 작업하기에 작업 후 외부의 변수 값이 변경되게 된다. 
-
 
 
 추상 데이터 타입 (ADT:Abstract Data Type)
@@ -204,7 +204,6 @@ ADT는 구체적인 기능의 완성 과정은 서술하지 않고 오로지 순
 open api
 -----
 Open API(open Application Programming interface)는 개발자라면 누구나 사용할 수 있도록 공개된 API를 말한다. 사용자는 API에 원하는 정보를 요청하여 받을 수 있다.
-
 
 
 객체(object)
@@ -245,7 +244,6 @@ Open AI는 인류에게 이익을 주는 것을 목표로하는 인공지능 연
 GPT-3(Generative Pre-trained Transformer 3)
 -----
 GPT-3는 Open AI가 만든 GPT 언어 예측 모델의 3번째 버전이다. 단 몇개의 키워드를 넣으면 작문을 작성해주는 언어모델이며 일종의 자동완성 프로그램이다.
-
 
 
 상속(inheritance)
