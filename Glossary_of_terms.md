@@ -102,7 +102,7 @@ RNN
 1. 순환신경망(Recurrent neural network)
 * 인공 신경망의 한 종류, 유닛간의 연결이 순환적 구조를 갖는 특징을 가진다. 이 구조는 시변적 특성(시간에 연속적인 특성)을 모델링 할 수 있어서 연속적(시퀀스)형태의 입력을 처리할 수 있다.
 * ![image](https://user-images.githubusercontent.com/40755420/138584728-4ef283a3-f061-4483-9d2c-818579da7872.png)
-3. 재귀신경망(Recursive neural network)
+2. 재귀신경망(Recursive neural network)
 * 심층 신경망(Deep neural network)의 한 종류로 ㄴㅇㄹㄴㄴㄹㅁㄹㅇㄴㅁㅇㄹㄴㅁㅇㄹㄹㄴㅇㄹㄴㅇㄹㄴㅇㄹㄴㅇㄹㄴㅇㄹㄴㅇㄹㄴㅇㄹㄴㅇㄹㄴㅇㄹ
 * ![image](https://user-images.githubusercontent.com/40755420/138584814-3d9ce6f3-5368-4373-a71f-4bcfc31f72e6.png)
  
