@@ -198,17 +198,23 @@ def search_grade():
     #예외처리 A,B,C,D,F 외의 값이 입력된 경우
     if Search_rank not in ['A','B','C','D','F']:
         return
-    print_title()
+    
     
     grade_stu_count = 0
     
     for stu_id in stu_ids:
         if score_board_dict[stu_id][4] == Search_rank:
-            print_stu_info(stu_id)
             grade_stu_count+=1
+    
     #예외처리 : 해당 grade의 학생이 없는 경우
     if grade_stu_count == 0:
         print("NO RESULTS.")
+        return
+
+    print_title()
+    for stu_id in stu_ids:
+        if score_board_dict[stu_id][4] == Search_rank:
+            print_stu_info(stu_id)
         
 #6. Remove 명령 실행 -> 특정 학생의 정보 삭제
 def remove_stu_info():
