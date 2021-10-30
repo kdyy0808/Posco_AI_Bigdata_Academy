@@ -54,7 +54,7 @@ def save_data():
             
             stu_id = score_board_keys[stu_num]
             stu_name, stu_mid, stu_fin,stu_mean,stu_grade = score_board_dict[score_board_keys[stu_num]]
-            f.write("{}\t {}\t {}\t{}\t{}\t{}\n".format(stu_id,stu_name,stu_mid, stu_fin,stu_mean,stu_grade))
+            f.write("{}\t {}\t {}\t{}\t{:.1f}\t{}\n".format(stu_id,stu_name,stu_mid, stu_fin,stu_mean,stu_grade))
 
 #터미널에 표 양식 출력
 def print_title():
@@ -66,10 +66,16 @@ def print_stu_info(stu_id):
     #stu_id = sorted_score_board_keys[stu_num]
     stu_name, stu_mid, stu_fin,stu_mean,stu_grade = score_board_dict[stu_id]
     print("{}\t".format(stu_id)+"{}".format(stu_name).rjust(15),end="")
-    print(" \t{}\t{}\t{:.1f}\t\t{}\n".format(stu_mid, stu_fin,stu_mean,stu_grade))
+    print(" \t{}\t{}\t{:.1f}\t\t{}".format(stu_mid, stu_fin,stu_mean,stu_grade))
     
 #1.Show 명령 실행 -> 전체 학생 정보출력(평균 점수기준 내림차순)
 def show_result(sort=0):
+    
+    #예외처리 : 목록에 아무도 없을 경우
+    if len(score_board_dict) == 0:
+        print("There is no data.")
+        return
+    
     print_title()
     global score_board_keys
 
@@ -91,6 +97,7 @@ def search_result():
     if input_stu_id in score_board_dict.keys():
         print_title()
         print_stu_info(input_stu_id)
+    #예외처리 항목
     else:
         print("NO SUCH PERSON.")
         
@@ -106,12 +113,12 @@ def change_score():
         elif chosed_case == "final":
             Mid_or_Final_key = 1
         else :
-            #mid or final값이 아닐경우 
+            #예외 처리 : mid or final값이 아닐경우 
             return
         
         revised_score = input("Input new score:")
         
-        #0~100 외의 값이 입력된 경우
+        #예외 처리 : 0~100 외의 값이 입력된 경우
         if 0 > int(revised_score) or int(revised_score) > 100:
             return
         
@@ -121,7 +128,8 @@ def change_score():
         
         print("Score changed.")
         print_stu_info(input_stu_id)
-        
+    
+    #예외 처리 : 학번이 목록에 없을 경우
     else:
         print("NO SUCH PERSON.")
         return
@@ -154,6 +162,7 @@ def add_Dict_Inner_value():
     
     stu_id = input("Student ID:")
     
+    #에러처리 : 목록에 있는 학생의 학번 입력시
     if stu_id in score_board_dict.keys():
         print("ALREADY EXISTS.")
         return
@@ -178,6 +187,7 @@ def search_grade():
     stu_ids = list(score_board_dict.keys())
     
     Search_rank=input("Grade to search:")
+    #예외처리 A,B,C,D,F 외의 값이 입력된 경우
     if Search_rank not in ['A','B','C','D','F']:
         return
     print_title()
@@ -188,6 +198,7 @@ def search_grade():
         if score_board_dict[stu_id][4] == Search_rank:
             print_stu_info(stu_id)
             grade_stu_count+=1
+    #예외처리 : 해당 grade의 학생이 없는 경우
     if grade_stu_count == 0:
         print("NO RESULTS.")
         
@@ -198,11 +209,14 @@ def remove_stu_info():
     global score_board_keys
     stu_ids = list(score_board_dict.keys())
     
+    #예외처리 : 목록에 아무도 없을 경우
     if len(score_board_dict) == 0:
         print("List is empty")
         return
     
     stu_id=input("Student ID:")
+    
+    #예외 처리 : 학생이 목록에 없는 경우
     if stu_id not in stu_ids:
         print("NO SUCH PERSON.")
         return
@@ -240,9 +254,23 @@ def quit_program():
             stu_name, stu_mid, stu_fin, stu_mean, stu_grade = score_board_dict[stu_id]
             f.write("{}\t {}\t {}\t{}\n".format(stu_id, stu_name, stu_mid, stu_fin))
 
+def show_help():
+    print("-------help--------")
+    print("다음과 같은 명령어가 있습니다.")
+    print("show -> 학생들의 정보를 보여줍니다.")
+    print("search -> 학생의 학번을 이용하여 특정 학생의 정보를 보여줍니다.")
+    print("add -> 정보에 없는 학생의 정보를 추가합니다.")
+    print("searchgrade -> 특정 학점을 취득한 학생을 모아서 보여줍니다.")
+    print("remove -> 특정 학생의 정보를 제거합니다.")
+    print("quit -> 프로그램을 종료합니다.")
+    print("help -> 명령어 목록을 보여줍니다.")
+    
 #메인 명령 대기 쓰레드            
 def command_waiting():
     command_input=input("#")
+    #입력한 명령어의 대소구분을 없애기 위해 다 소문자로 변환
+    command_input = command_input.lower()
+    
     if command_input == "show":
         show_result()
     elif command_input == "search":
@@ -255,12 +283,14 @@ def command_waiting():
         search_grade()
     elif command_input == "remove":
         remove_stu_info()
-    
     elif command_input == "quit":
         quit_program()
     
-    else:
-        print("error")
+    #입력한 명령 이외의 명령이 들어왔을 때,아무 에러메세지 없이 다음명령을 받으라고 명시되있어서 아래 코드는 주석처리 하였다.
+#     elif command_input == "help":
+#         show_help()
+#     else:
+#         print('error : Enter the correct command, if you need help : enter the command help" ')
 
 
 def main():
