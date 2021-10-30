@@ -114,12 +114,14 @@ def change_score():
             Mid_or_Final_key = 1
         else :
             #예외 처리 : mid or final값이 아닐경우 
+            print("mid 또는 final 을 입력해주세요")
             return
         
         revised_score = input("Input new score:")
         
         #예외 처리 : 0~100 외의 값이 입력된 경우
         if 0 > int(revised_score) or int(revised_score) > 100:
+            print("0~100 사이의 숫자를 입력하세요")
             return
         
         print_title()
@@ -147,6 +149,7 @@ def change_Dict_Inner_value(stu_id,Mid_or_Final,value):
         stu_fin = value
     else:
         #mid or Final외의 값이 입력되었을때
+        print("mid 또는 final 을 입력해주세요")
         return
     
     stu_average = float((int(stu_mid) + int(stu_fin))*0.5)
@@ -197,6 +200,7 @@ def search_grade():
     Search_rank=input("Grade to search:")
     #예외처리 A,B,C,D,F 외의 값이 입력된 경우
     if Search_rank not in ['A','B','C','D','F']:
+        print("학점은 A,B,C,D,F 중 하나여야 합니다.")
         return
     
     
