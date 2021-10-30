@@ -169,7 +169,15 @@ def add_Dict_Inner_value():
     
     stu_name = input("Name:")
     stu_mid = input("Midterm Score:")
+    
+    #예외 처리 : 범위 밖의 점수를 입력하였을 경우
+    if int(stu_mid)<0 or int(stu_mid)>100:
+        print("값은 0~100사이의 값이어야합니다 다시 처음부터 추가해주세요")
+        return
     stu_fin = input("Final Score:")
+    if int(stu_mid)<0 or int(stu_mid)>100:
+        print("값은 0~100사이의 값이어야합니다 다시 처음부터 추가해주세요")
+        return
     
     stu_average = float((int(stu_mid) + int(stu_fin))*0.5)
     stu_grade = get_rank(stu_average)
