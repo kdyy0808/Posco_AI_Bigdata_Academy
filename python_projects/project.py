@@ -261,6 +261,9 @@ def quit_program():
             stu_id = score_board_keys[stu_num]
             stu_name, stu_mid, stu_fin, stu_mean, stu_grade = score_board_dict[stu_id]
             f.write("{}\t {}\t {}\t{}\n".format(stu_id, stu_name, stu_mid, stu_fin))
+def show_command_list():
+    print("-"*32+"COMMAND LIST"+"-"*32)
+    print("show | search | changescore | searchgrade | add | remove | quit")
 
 def show_help():
     print("-------help--------")
@@ -304,6 +307,9 @@ def command_waiting():
 def main():
     
     load_data()
+    show_result()
+    show_command_list()
+    
     while shut_down_flag == False:
         command_waiting()
 
