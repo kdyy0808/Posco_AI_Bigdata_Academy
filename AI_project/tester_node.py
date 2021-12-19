@@ -356,7 +356,7 @@ def get_testers(args):
     #if args.robot:
         # Requested tester for one robot
         #init_x, init_y, final_x, final_y = args.robot[0]
-    init_x, init_y, final_x, final_y = ('0','0','2','0')
+    init_x, init_y, final_x, final_y = ('-3.19','-5.88','-8.6','-1.34')
 
     tester = NavTester(
         initial_pose=fwd_pose(float(init_x), float(init_y)),###float init_x
